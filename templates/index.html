@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        /* --- Page styling --- */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            padding: 50px;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        input {
+            padding: 10px;
+            width: 70%;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-left: 8px;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .weather-card {
+            margin-top: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .weather-card h2 {
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        .weather-icon {
+            font-size: 60px;
+            text-align: center;
+            display: block;
+        }
+
+        .detail {
+            margin: 8px 0;
+            font-size: 16px;
+            color: #34495e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌤️ Weather Lookup</h1>
+        <p>Enter a UK postcode to get the current weather</p>
+
+        <!-- the form: when user clicks button it sends postcode to /weather -->
+        <form action="/weather" method="POST">
+            <input type="text" name="postcode" placeholder="e.g. IG5 0SS" required>
+            <button type="submit">Search</button>
+        </form>
+
+        <!-- only shows if Flask sent back weather data -->
+        {% if weather %}
+        <div class="weather-card">
+
+            <!-- weather icon based on condition -->
+            {% set description = weather['weather'][0]['description'] %}
+            {% if 'rain' in description %}
+                <span class="weather-icon">🌧️</span>
+            {% elif 'cloud' in description %}
+                <span class="weather-icon">☁️</span>
+            {% elif 'clear' in description %}
+                <span class="weather-icon">☀️</span>
+            {% elif 'snow' in description %}
+                <span class="weather-icon">❄️</span>
+            {% elif 'thunder' in description %}
+                <span class="weather-icon">⛈️</span>
+            {% else %}
+                <span class="weather-icon">🌤️</span>
+            {% endif %}
+
+            <h2>{{ postcode }} — {{ weather['name'] }}</h2>
+            <p class="detail">🌡️ Temperature: {{ weather['main']['temp'] }}°C (feels like {{ weather['main']['feels_like'] }}°C)</p>
+            <p class="detail">🌥️ Condition: {{ weather['weather'][0]['description'].capitalize() }}</p>
+            <p class="detail">💧 Humidity: {{ weather['main']['humidity'] }}%</p>
+            <p class="detail">💨 Wind Speed: {{ weather['wind']['speed'] }} m/s</p>
+        </div>
+        {% endif %}
+
+    </div>
+</body>
+</html>

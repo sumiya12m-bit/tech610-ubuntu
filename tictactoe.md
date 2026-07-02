@@ -1,19 +1,16 @@
-# First App
+## TICTACTOE App
 
 Security Group:
 - SSH from my IP on Port 22
 - All traffic on Port 3000
 
-`ssh -i ~/.ssh/sumiya-tech610-key.pem ubuntu@52.215.92.93
+ssh -i ~/.ssh/sumiya-tech610-key.pem ubuntu@3.250.16.49
 
-## VM Set Up
-```bash
+## VM Set UP
+
+```Bash
 sudo apt update -y
 sudo apt upgrade -y
-
-# Install nginx
-
-sudo apt install nginx -y
 
 # Install Node 35 v20
 
@@ -26,22 +23,23 @@ sudo apt install nodejs -y
 to check if you have node: node -v
 ```
 
-## Get Source Code on to the VM
+## Get Source on to the VM
 
 Options:
+
 - Git
 - Copy (scp)
 
-`scp -i KEY SOURCE TARGET
+scp -i KEY SOURCE TARGET
 
-e.g scp -i ~/.ssh/sumiya-tech610-key.pem ~/Downloads/nodejs20-sparta-test-app.zip ubuntu@52.215.92.93:/home/ubuntu/
+scp -i ~/.ssh/sumiya-tech610-key.pem ~/Downloads/nodejs20-sparta-tictactoe-v1-2.zip ubuntu@3.250.16.49:/home/ubuntu/
 
 ```bash
 sudo apt install unzip -y
 
-unzip nodejs20-sparta-test-app.zip
-```
+unzip nodejs20-sparta-tictactoe-v1-2.zip
 
+```
 # Going into the app
 
 ``` BASH
