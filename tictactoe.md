@@ -43,9 +43,22 @@ unzip nodejs20-sparta-tictactoe-v1-2.zip
 # Going into the app
 
 ``` BASH
-- ls
-- ls app 
+ls
+ls app 
 
-- cd app
-- npm install
-- npm start 
+cd app
+npm install
+npm start 
+
+## PM2
+
+```bash 
+sudo npm install pm2 -g
+
+pm2 start index.js 
+
+# list running apps
+pm2 list 
+
+# kill all running apps 
+pm2 kill 
