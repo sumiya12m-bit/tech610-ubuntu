@@ -40,5 +40,15 @@ sudo apt-get install -y \
    mongodb-org-database-tools-extra=8.2.5
 echo Done!
 
+# configure bindIp
+echo configure bindIp...
+sudo sed -i 's/bindIp: 127.0.0.1/bindIp: 0.0.0.0/' /etc/mongod.conf
+echo Done!
 
-curl -fsSL https://pgp.mongodb.com/server-8.0.asc | \ sudo gpg -o /usr/share/keyrings/mongodb-server-8.0.gpg \ --dearmor
+echo enable MongoDB...
+sudo systemctl enable mongod
+echo Done!
+
+echo start MongoDB...
+sudo systemctl start mongod
+echo Done!

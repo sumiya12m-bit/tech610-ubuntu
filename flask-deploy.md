@@ -112,5 +112,5 @@ chmod +x flask-deploy.sh
 
 Below is a screenshot of my flask application deployed when using IP address in browser:
 
-![A screenshot of the Flask Weather App when search with IP Address](FlaskWeather-app-screenshot.png)
+![A screenshot of the Flask Weather App when search with IP Address](images/FlaskWeather-app-screenshot.png)
 
