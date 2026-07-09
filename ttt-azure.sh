@@ -23,7 +23,7 @@ git clone https://github.com/davidrichardharvey/tech610-tic-tac-toe
 
 
 # ── Install dependencies and start the app 
-cd /tech610-tic-tac-toe/app
+cd ~/tech610-tic-tac-toe/app
 sudo npm install pm2 -g
 npm install
 
