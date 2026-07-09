@@ -6,7 +6,7 @@ This documents the process of re-deploying the TicTacToe 2-tier application on M
 
 ---
 
-## AWS vs Azure — Key Differences
+## AWS vs Azure - Key Differences
 
 | | AWS | Azure |
 |---|---|---|
@@ -59,7 +59,7 @@ DB VM (Ubuntu 24 - private subnet)
 
 ---
 
-## Step 1 — Create SSH Key Pair
+## Step 1 - Create SSH Key Pair
 
 The SSH key was generated through the Azure GUI when creating the first VM. Azure generates an Ed25519 key pair and downloads the private key automatically.
 
@@ -68,7 +68,7 @@ The SSH key was generated through the Azure GUI when creating the first VM. Azur
 
 ---
 
-## Step 2 — Create the VNet
+## Step 2 - Create the VNet
 
 A Virtual Network (VNet) with two subnets was created to separate the app and database layers.
 
@@ -86,7 +86,7 @@ A Virtual Network (VNet) with two subnets was created to separate the app and da
 
 ---
 
-## Step 3 — Create the DB VM
+## Step 3 - Create the DB VM
 
 | Setting | Value |
 |---|---|
@@ -106,7 +106,7 @@ A Virtual Network (VNet) with two subnets was created to separate the app and da
 
 ---
 
-## Step 4 — Create the App VM
+## Step 4 - Create the App VM
 
 | Setting | Value |
 |---|---|
@@ -126,9 +126,9 @@ A Virtual Network (VNet) with two subnets was created to separate the app and da
 
 ---
 
-## Step 5 — Deploy MongoDB on the DB VM
+## Step 5 - Deploy MongoDB on the DB VM
 
-### Blocker — DB VM Had No Internet Access
+### Blocker - DB VM Had No Internet Access
 
 The DB VM was in the private subnet with no public IP so it couldn't reach the internet to download MongoDB packages. This was a key difference from AWS.
 
@@ -145,7 +145,7 @@ Temporarily added a public IP to the DB VM's primary IP configuration:
 
 This gave the DB VM temporary internet access to run the script.
 
-### Fix Key Permissions — Blocker
+### Fix Key Permissions - Blocker
 
 When copying the private key to the App VM to use as a jump box, SSH rejected it because the permissions were too open:
 
@@ -159,7 +159,7 @@ Fix:
 chmod 600 ~/.ssh/sumiya-azure-tech610-key.pem
 ```
 
-### Jump Box — Connecting to DB VM via App VM
+### Jump Box - Connecting to DB VM via App VM
 
 Since the DB VM had no public IP initially, we used the App VM as a jump box:
 
@@ -219,7 +219,7 @@ DB VM private IP after moving back: `10.0.3.4`
 
 ---
 
-## Step 6 — Deploy the App VM
+## Step 6 - Deploy the App VM
 
 ### SCP the App Script
 
