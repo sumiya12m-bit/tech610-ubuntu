@@ -25,6 +25,9 @@ sudo mysql -e "FLUSH PRIVILEGES;"
 # ── Create library database ────────────────────────────
 sudo mysql -e "CREATE DATABASE library;"
 
+# Wait for network to be ready
+sleep 10
+
 # ── Clone repo to get library.sql ─────────────────────
 git clone https://github.com/sumiya12m-bit/tech610-ubuntu.git
 
