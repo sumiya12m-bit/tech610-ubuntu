@@ -24,3 +24,12 @@ pm2 start index.js
 * Is it a systematic approach?
 * What is the easiest thing to check?
 * What is most likely thing it could be?
+
+### What to expect when launching App VM with user data
+
+How long to expect before app runs? approx 4 mins
+
+1. An error (not being able to connect)
+2. Nginx home/welcome page (Rev proxy has not started working yet)
+3. 502 error: Bad gateway (Rev proxy has started working, but app is not running yet)
+4. App display

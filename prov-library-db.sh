@@ -29,4 +29,4 @@ sudo mysql -e "CREATE DATABASE library;"
 git clone https://github.com/sumiya12m-bit/tech610-ubuntu.git
 
 # ── Seed the database ─────────────────────────────────
-sudo mysql library < /tech610-ubuntu/library.sql
+sudo mysql library < /home/ubuntu/tech610-ubuntu/library.sql
