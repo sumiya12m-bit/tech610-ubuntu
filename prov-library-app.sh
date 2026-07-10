@@ -22,7 +22,7 @@ sudo apt install maven -y
 git clone https://github.com/sumiya12m-bit/tech610-ubuntu.git
 
 # ── Set environment variables ──────────────────────────
-export DB_HOST=jdbc:mysql://172.31.62.97:3306/library
+export DB_HOST=jdbc:mysql://172.31.62.144:3306/library
 export DB_USER=admin
 export DB_PASS=password123
 
