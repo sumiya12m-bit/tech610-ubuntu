@@ -1,6 +1,27 @@
 # Monitoring, Alert Management and Auto Scaling
 
 ---
+- [Monitoring, Alert Management and Auto Scaling](#monitoring-alert-management-and-auto-scaling)
+  - [What is Performance Testing?](#what-is-performance-testing)
+    - [What We Did](#what-we-did)
+  - [Worst to Best: Monitoring and Responding to Load/Traffic](#worst-to-best-monitoring-and-responding-to-loadtraffic)
+    - [Key Principle](#key-principle)
+  - [Setting Up a CloudWatch Dashboard](#setting-up-a-cloudwatch-dashboard)
+    - [Steps to Create a Dashboard](#steps-to-create-a-dashboard)
+    - [What Each Metric Shows](#what-each-metric-shows)
+    - [Dashboard Screenshot](#dashboard-screenshot)
+  - [Using Apache Bench for Load Testing](#using-apache-bench-for-load-testing)
+    - [Installing Apache Bench](#installing-apache-bench)
+    - [The ab Command Format](#the-ab-command-format)
+    - [Load Testing Commands We Used](#load-testing-commands-we-used)
+    - [How Load Testing and the Dashboard Worked Together](#how-load-testing-and-the-dashboard-worked-together)
+  - [Setting Up a CPU Usage Alarm](#setting-up-a-cpu-usage-alarm)
+    - [Steps to Create a CPU Usage Alarm](#steps-to-create-a-cpu-usage-alarm)
+    - [Email Notification Screenshot](#email-notification-screenshot)
+  - [Cleaning Up](#cleaning-up)
+    - [Delete in This Order](#delete-in-this-order)
+    - [Why Clean Up?](#why-clean-up)
+  - [Summary](#summary)
 
 ## What is Performance Testing?
 

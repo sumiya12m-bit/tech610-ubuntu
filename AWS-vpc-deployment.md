@@ -1,7 +1,29 @@
 # AWS Custom VPC - 2-Tier Deployment Documentation
 
 ---
-
+- [AWS Custom VPC - 2-Tier Deployment Documentation](#aws-custom-vpc---2-tier-deployment-documentation)
+  - [What is a VPC?](#what-is-a-vpc)
+  - [Understanding the Default VPC vs Custom VPC](#understanding-the-default-vpc-vs-custom-vpc)
+  - [Architecture Diagram](#architecture-diagram)
+  - [Why Do We Need a Public and Private Subnet?](#why-do-we-need-a-public-and-private-subnet)
+  - [Step 1 - Create the VPC](#step-1---create-the-vpc)
+  - [Step 2 - Create Subnets](#step-2---create-subnets)
+    - [Public Subnet](#public-subnet)
+    - [Add New Subnet - Private Subnet](#add-new-subnet---private-subnet)
+  - [Step 3 - Create and Attach the Internet Gateway](#step-3---create-and-attach-the-internet-gateway)
+  - [Step 4 - Create the Public Route Table](#step-4---create-the-public-route-table)
+    - [Associate with Public Subnet](#associate-with-public-subnet)
+    - [Add Route to Internet](#add-route-to-internet)
+  - [Step 5 - Launch the DB VM](#step-5---launch-the-db-vm)
+  - [Step 6 — Launch the App VM](#step-6--launch-the-app-vm)
+  - [Step 7 - Test it's Working](#step-7---test-its-working)
+  - [Security Group Summary](#security-group-summary)
+  - [Cleaning Up](#cleaning-up)
+    - [Step 1 — Terminate both VMs](#step-1--terminate-both-vms)
+    - [Step 2 — Delete the VPC](#step-2--delete-the-vpc)
+  - [Key Concepts Summary](#key-concepts-summary)
+  
+---
 ## What is a VPC?
 
 A VPC (Virtual Private Cloud) is your own private, isolated network inside AWS. Think of AWS as a large office building shared by thousands of companies - your VPC is your company's private floor with its own rules about who can come in and out.
