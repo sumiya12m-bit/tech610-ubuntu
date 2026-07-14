@@ -240,7 +240,7 @@ Once both VMs are running:
 ```
 http://<app-vm-public-ip>
 ```
-The TicTacToe app should load and be connected to MongoDB ✅
+The TicTacToe app should load and be connected to MongoDB 
 
 ---
 
