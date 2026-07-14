@@ -120,7 +120,7 @@ Click **Add new subnet** and fill in:
 
 Click **Create subnet**
 
-> Each subnet gets its own CIDR block — a smaller range of IPs carved out of the VPC's range. 10.0.2.0/24 gives 256 IPs for the public subnet and 10.0.3.0/24 gives 256 for the private subnet.
+> Each subnet gets its own CIDR block - a smaller range of IPs carved out of the VPC's range. 10.0.2.0/24 gives 256 IPs for the public subnet and 10.0.3.0/24 gives 256 for the private subnet.
 
 ---
 
@@ -131,15 +131,15 @@ An Internet Gateway is what connects your VPC to the internet. Without it, nothi
 1. Go to **Internet Gateways → Create internet gateway**
 2. Name: `tech610-sumiya-2tier-first-vpc-ig`
 3. Click **Create internet gateway**
-4. Once created — click **Actions → Attach to VPC**
+4. Once created - click **Actions → Attach to VPC**
 5. Select your VPC and click **Attach internet gateway**
-6. Confirm the state shows **Attached** ✅
+6. Confirm the state shows **Attached** 
 
 ---
 
 ## Step 4 - Create the Public Route Table
 
-A route table contains rules (routes) that determine where network traffic is directed. The private route table is created automatically by AWS when you create the VPC — you only need to create the public one.
+A route table contains rules (routes) that determine where network traffic is directed. The private route table is created automatically by AWS when you create the VPC - you only need to create the public one.
 
 1. Go to **Route Tables → Create route table**
 2. Fill in:
