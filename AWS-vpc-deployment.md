@@ -74,8 +74,8 @@ The numbered steps on the diagram match the order we built things:
 
 | | Public Subnet | Private Subnet |
 |---|---|---|
-| Internet access | ✅ Yes | ❌ No |
-| Has public IP | ✅ Yes | ❌ No |
+| Internet access | Yes |  No |
+| Has public IP |  Yes |  No |
 | What lives here | App VM | DB VM |
 | Why | Users need to reach the app | DB should never be exposed to internet |
 | Extra security | Security group controls ports | No public IP = completely hidden |
