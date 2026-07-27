@@ -1,7 +1,6 @@
 # Jenkins CI/CD Pipeline — TicTacToe App Documentation
 
 ---
-
 ## Table of Contents
 - [Jenkins CI/CD Pipeline — TicTacToe App Documentation](#jenkins-cicd-pipeline--tictactoe-app-documentation)
   - [Table of Contents](#table-of-contents)
@@ -9,6 +8,7 @@
     - [Without CI/CD](#without-cicd)
     - [With CI/CD](#with-cicd)
   - [Pipeline Diagram](#pipeline-diagram)
+  - [](#)
   - [Prerequisites](#prerequisites)
   - [Authentication and Security](#authentication-and-security)
     - [Jenkins to GitHub (SSH)](#jenkins-to-github-ssh)
@@ -33,6 +33,7 @@
   - [Benefits of This Pipeline](#benefits-of-this-pipeline)
     - [Benefits Seen During This Task](#benefits-seen-during-this-task)
     - [Benefits for an Organisation](#benefits-for-an-organisation)
+
 
 ---
 
@@ -130,6 +131,8 @@ EC2 Instance ←────────┘
 (app live at
 http://34.241.30.177)
 ```
+Diagram 2
+![jenkins 3-job pipeline diagram](../../images/Jenkins-pipeline-diagram.png)
 ---
 
 ## Prerequisites
@@ -393,7 +396,7 @@ All 3 jobs complete with green ticks in Jenkins:
 
 ### Change 1 — Front Page Updated
 
-*(Add screenshot of Change 1 here — v1.2.0 27/07/2026 - Change 1)* ![first change to app homepage](../)
+![first change to app homepage](../../images/1st-Change-HP-TTT.png)
 
 The version stamp at the bottom of the page shows:
 ```
@@ -401,13 +404,14 @@ v1.2.0 27/07/2026 - Change 1
 ```
 ### Change 2 — Front Page Updated Again
 
-*(Add screenshot of Change 2 here — v1.2.0 | Updated: 27/07/2026 - 15:08)*
+
+![Second change to app homepage](../../images/2nd%20Change%20-%20HP%20TTT.png)
 
 The version stamp updated to:
 ```
 v1.2.0 | Updated: 27/07/2026 - 15:08
 ```
-Both changes were deployed automatically within minutes of pushing to the dev branch — with zero manual steps.
+Both changes were deployed automatically within minutes of pushing to the dev branch - with zero manual steps.
 
 ---
 
